@@ -1,0 +1,214 @@
+@import url(//fonts.googleapis.com/css?family=Lato:300:400);
+
+body {
+    margin: 0;
+}
+
+/* ------------- nav ---------------*/
+
+.Counter-nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    /* background-color: white; */
+    /* border-bottom: solid 2px black; */
+    box-shadow: rgba(255, 255, 255, 0.884) 0px 2px 1px, rgba(255, 255, 255, 0.884) 0px 4px 2px, rgba(255, 255, 255, 0.884) 0px 8px 4px, rgba(255, 255, 255, 0.884) 0px 16px 8px, rgba(255, 255, 255, 0.884) 0px 32px 16px;
+}
+
+.Counter-nav-link {
+    display: flex;
+    justify-content: space-between;
+}
+
+div a {
+    text-decoration: none;
+    font-size: 1.4rem;
+    color: black;
+    padding: 1rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    transition: 300ms ease-out;
+
+}
+
+
+/* background-color: blue;
+    border-radius: .5rem;
+    transition: 300ms  ease-in;
+    color: white; */
+
+div a:hover {
+    /* font-size: 18px; */
+    /* letter-spacing: 2px; */
+    /* text-transform: uppercase; */
+    display: inline-block;
+    text-align: center;
+    font-weight: bold;
+    /* padding: 0.7em 2em; */
+    /* border: 3px solid #fc5b5b; */
+    border-radius: 6.5rem;
+    position: relative;
+    box-shadow: rgba(250, 249, 249, 0.25) 0px 25px 50px -12px;
+    color: #ffffff;
+    text-decoration: none;
+    transition: 0.3s ease all;
+
+  
+}
+
+/* .btn_all:hover {
+        background-color: #eee7e7;
+        transition: all 300ms;
+        border:  solid #5bc3fc;
+      } */
+
+div a:before {
+    transition: 0.5s all ease;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    right: 50%;
+    bottom: 0;
+    opacity: 0;
+    content: '';
+    background-color: #fc5b5b;
+    z-index: -1;
+    border-radius: 6rem;
+
+}
+
+div a:hover,
+div a:focus {
+    color: white;
+}
+
+div a:hover:before,
+div a:focus:before {
+    transition: 0.5s all ease;
+    left: 0;
+    right: 0;
+    opacity: 1;
+}
+
+div a:active {
+    transform: scale(0.9);
+}
+
+
+#logo {
+    width: 15%;
+    padding: 1rem;
+}
+
+h1 {
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    letter-spacing: 2px;
+    font-size: 48px;
+}
+
+p {
+    font-family: 'Lato', sans-serif;
+    letter-spacing: 1px;
+    font-size: 14px;
+    color: #333333;
+}
+
+.header {
+    position: relative;
+    text-align: center;
+    /* background: linear-gradient(60deg, rgb(183, 58, 75) 0%, rgb(4, 205, 231) 100%); */
+    background-color: rgb(248, 95, 95);
+    color: white;
+    z-index: -1;
+}
+
+.logo {
+    width: 50px;
+    fill: white;
+    padding-right: 15px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.inner-header {
+    height: 65vh;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.flex {
+    /*Flexbox for containers*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.waves {
+    position: relative;
+    width: 100%;
+    height: 15vh;
+    margin-bottom: -7px;
+    /*Fix for safari gap*/
+    min-height: 100px;
+    max-height: 150px;
+}
+
+.content {
+    position: relative;
+    height: 20vh;
+    text-align: center;
+    /* background-color: white; */
+}
+
+.parallax>use {
+    animation: move-forever 25s cubic-bezier(.55, .5, .45, .5) infinite;
+}
+
+.parallax>use:nth-child(1) {
+    animation-delay: -2s;
+    animation-duration: 7s;
+}
+
+.parallax>use:nth-child(2) {
+    animation-delay: -3s;
+    animation-duration: 10s;
+}
+
+.parallax>use:nth-child(3) {
+    animation-delay: -4s;
+    animation-duration: 13s;
+}
+
+.parallax>use:nth-child(4) {
+    animation-delay: -5s;
+    animation-duration: 20s;
+}
+
+@keyframes move-forever {
+    0% {
+        transform: translate3d(-90px, 0, 0);
+    }
+
+    100% {
+        transform: translate3d(85px, 0, 0);
+    }
+}
+
+@media (max-width: 768px) {
+    .waves {
+        height: 40px;
+        min-height: 40px;
+    }
+
+    .content {
+        height: 30vh;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+}
